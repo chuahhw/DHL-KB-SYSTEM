@@ -10,7 +10,7 @@ router.post('/generate', auth, async (req, res) => {
   const { rawText, imageBase64, imageMime } = req.body;
 
   try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash-lite' });
     let result;
 
     if (imageBase64) {
